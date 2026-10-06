@@ -1,0 +1,302 @@
+id_registro,ciclo,modulo,tipo_modulo,codigo_sensor,distancia_km,carga_rede_pct,qualidade_sinal_pct,perda_pacotes_pct,tensao_v,corrente_a,latencia_prevista_ms,latencia_observada_ms,status,prioridade_base,mensagem_alerta
+1,1,Comunicação Orbital,comunicação,0x1101,2.4,31.6,88.5,0.68,27.99,2.47,57.5,52.59,ativo,4,
+2,1,Comando Central,comunicação,0x1201,0.3,56.2,92.5,0.44,27.74,1.84,45.5,46.13,ativo,5,
+3,1,Habitação Alfa,habitação,0x2101,1.2,54.1,87.3,0.72,28.37,1.19,67.5,71.41,ativo,3,
+4,1,Habitação Beta,habitação,0x2201,1.6,64.6,89.5,0.79,28.13,1.35,72.5,82.14,ativo,3,
+5,1,Estufa Hidropônica,agricultura,0x3101,2.1,40.4,93.9,0.47,27.97,1.33,82.5,73.73,ativo,3,
+6,1,Laboratório Geológico,laboratório,0x4101,3.5,68.4,90.2,0.38,28.07,1.51,97.5,110.85,ativo,2,
+7,1,Centro Médico,suporte médico,0x5101,0.8,59.0,90.7,0.53,28.09,1.66,52.5,53.65,ativo,5,
+8,1,Data Center,armazenamento de dados,0x6101,0.5,46.5,85.4,1.06,28.45,2.09,39.5,45.77,ativo,2,
+9,1,Controle Ambiental,suporte de vida,0x7101,0.9,49.0,88.7,0.94,28.21,1.78,49.5,50.59,ativo,5,
+10,1,Antena Espaço Profundo,comunicação interplanetária,0x8101,225000000.0,70.4,87.2,0.55,27.66,6.14,751719.21,752143.5,ativo,5,
+11,2,Comunicação Orbital,comunicação,0x1101,2.4,57.6,90.8,0.38,28.05,2.7,57.5,62.04,ativo,4,
+12,2,Comando Central,comunicação,0x1201,0.3,43.1,86.5,0.9,27.64,1.85,45.5,43.23,ativo,5,
+13,2,Habitação Alfa,habitação,0x2101,1.2,63.7,89.8,0.83,27.97,1.17,67.5,77.85,ativo,3,
+14,2,Habitação Beta,habitação,0x2201,1.6,29.0,82.7,1.18,28.12,1.13,72.5,64.01,ativo,3,
+15,2,Estufa Hidropônica,agricultura,0x3101,2.1,48.6,93.1,0.0,27.94,1.32,82.5,79.96,ativo,3,
+16,2,Laboratório Geológico,laboratório,0x4101,3.5,23.9,89.7,0.7,27.82,1.37,97.5,84.38,ativo,2,
+17,2,Centro Médico,suporte médico,0x5101,0.8,59.2,88.1,1.31,27.93,1.5,52.5,62.77,ativo,5,
+18,2,Data Center,armazenamento de dados,0x6101,0.5,79.5,91.3,0.55,28.44,2.04,39.5,55.99,alerta,2,Latência acima do previsto
+19,2,Controle Ambiental,suporte de vida,0x7101,0.9,48.0,82.5,1.69,27.93,1.55,49.5,50.99,ativo,5,
+20,2,Antena Espaço Profundo,comunicação interplanetária,0x8101,225517241.0,70.1,96.0,0.76,28.12,6.11,753444.55,753211.53,ativo,5,
+21,3,Comunicação Orbital,comunicação,0x1101,2.4,59.8,84.7,1.11,27.82,2.58,57.5,72.45,ativo,4,
+22,3,Comando Central,comunicação,0x1201,0.3,52.1,83.9,0.83,27.85,1.79,45.5,58.43,ativo,5,
+23,3,Habitação Alfa,habitação,0x2101,1.2,72.7,86.0,0.72,27.71,1.15,67.5,93.22,alerta,3,Latência acima do previsto
+24,3,Habitação Beta,habitação,0x2201,1.6,70.1,84.4,1.55,28.12,1.19,72.5,90.21,ativo,3,
+25,3,Estufa Hidropônica,agricultura,0x3101,2.1,63.0,90.3,0.19,27.62,1.41,82.5,97.66,ativo,3,
+26,3,Laboratório Geológico,laboratório,0x4101,3.5,52.9,89.1,1.09,28.07,1.46,97.5,106.88,ativo,2,
+27,3,Centro Médico,suporte médico,0x5101,0.8,82.6,,0.38,27.59,1.76,52.5,80.94,alerta,5,Latência acima do previsto
+28,3,Data Center,armazenamento de dados,0x6101,0.5,48.1,93.8,0.0,27.73,2.28,39.5,36.19,ativo,2,
+29,3,Controle Ambiental,suporte de vida,0x7101,0.9,52.1,89.4,1.1,28.03,1.77,49.5,45.71,ativo,5,
+30,3,Antena Espaço Profundo,comunicação interplanetária,0x8101,226034483.0,39.8,83.1,1.16,27.9,6.86,755169.88,755138.28,ativo,5,
+31,4,Comunicação Orbital,comunicação,0x1101,2.4,55.6,86.1,0.97,28.3,2.68,57.5,70.26,ativo,4,
+32,4,Comando Central,comunicação,0x1201,0.3,42.5,87.1,1.02,28.05,1.68,45.5,45.15,ativo,5,
+33,4,Habitação Alfa,habitação,0x2101,1.2,98.0,95.5,0.0,27.91,1.09,67.5,138.22,alerta,3,Latência acima do previsto
+34,4,Habitação Beta,habitação,0x2201,1.6,41.9,85.4,0.51,27.95,1.12,72.5,68.89,ativo,3,
+35,4,Estufa Hidropônica,agricultura,0x3101,2.1,75.2,89.9,0.09,27.56,1.58,82.5,93.47,ativo,3,
+36,4,Laboratório Geológico,laboratório,0x4101,3.5,88.1,99.6,0.0,27.89,1.53,97.5,124.64,ativo,2,
+37,4,Centro Médico,suporte médico,0x5101,0.8,50.6,91.1,0.6,27.89,1.59,52.5,91.68,alerta,5,Latência acima do previsto
+38,4,Data Center,armazenamento de dados,0x6101,0.5,59.2,85.8,1.25,28.3,2.22,39.5,51.14,ativo,2,
+39,4,Controle Ambiental,suporte de vida,0x7101,0.9,55.0,85.1,1.28,27.97,1.91,49.5,63.82,ativo,5,
+40,4,Antena Espaço Profundo,comunicação interplanetária,0x8101,226551724.0,41.3,83.6,1.73,28.08,6.69,756895.21,756759.06,ativo,5,
+41,5,Comunicação Orbital,comunicação,0x1101,2.4,71.7,89.8,0.29,27.86,2.64,57.5,72.12,ativo,4,
+42,5,Comando Central,comunicação,0x1201,0.3,53.1,87.0,1.01,28.44,1.52,45.5,50.25,ativo,5,
+43,5,Habitação Alfa,habitação,0x2101,1.2,60.3,86.5,0.49,28.1,1.32,67.5,70.51,ativo,3,
+44,5,Habitação Beta,habitação,0x2201,1.6,49.1,87.8,0.55,27.9,1.29,72.5,76.93,ativo,3,
+45,5,Estufa Hidropônica,agricultura,0x3101,2.1,76.2,89.7,1.16,28.13,1.47,82.5,100.23,ativo,3,
+46,5,Laboratório Geológico,laboratório,0x4101,3.5,42.4,92.0,0.01,28.23,1.48,97.5,97.74,ativo,2,
+47,5,Centro Médico,suporte médico,0x5101,0.8,87.8,90.9,0.02,27.98,1.49,52.5,73.55,alerta,5,Latência acima do previsto
+48,5,Data Center,armazenamento de dados,0x6101,0.5,66.5,85.2,0.87,28.01,2.04,39.5,50.87,ativo,2,
+49,5,Controle Ambiental,suporte de vida,0x7101,0.9,43.3,92.6,0.47,27.31,1.73,49.5,46.51,ativo,5,
+50,5,Antena Espaço Profundo,comunicação interplanetária,0x8101,227068966.0,84.1,79.7,1.65,28.18,5.88,758620.54,759289.53,ativo,5,
+51,6,Comunicação Orbital,comunicação,0x1101,2.4,61.6,91.4,0.26,28.24,2.77,57.5,66.2,ativo,4,
+52,6,Comando Central,comunicação,0x1201,0.3,59.9,84.5,1.21,27.95,1.84,45.5,60.5,ativo,5,
+53,6,Habitação Alfa,habitação,0x2101,1.2,52.7,93.9,0.0,27.75,1.21,67.5,71.9,ativo,3,
+54,6,Habitação Beta,habitação,0x2201,1.6,78.9,91.4,0.68,28.17,1.37,72.5,90.65,ativo,3,
+55,6,Estufa Hidropônica,agricultura,0x3101,2.1,83.9,87.3,0.95,28.39,1.27,82.5,101.42,ativo,3,
+56,6,Laboratório Geológico,laboratório,0x4101,3.5,40.7,89.8,0.79,28.08,1.37,97.5,85.09,ativo,2,
+57,6,Centro Médico,suporte médico,0x5101,0.8,46.5,89.8,0.83,28.04,1.67,52.5,105.83,alerta,5,Latência acima do previsto
+58,6,Data Center,armazenamento de dados,0x6101,0.5,51.8,88.8,0.99,27.88,2.27,39.5,85.24,alerta,2,Latência acima do previsto
+59,6,Controle Ambiental,suporte de vida,0x7101,0.9,19.1,82.8,1.02,27.3,1.63,49.5,39.27,ativo,5,
+60,6,Antena Espaço Profundo,comunicação interplanetária,0x8101,227586207.0,58.6,92.4,0.72,27.98,7.03,760345.87,760668.9,ativo,5,
+61,7,Comunicação Orbital,comunicação,0x1101,2.4,39.9,85.6,0.68,27.73,2.54,57.5,58.31,manutenção,4,Manutenção programada
+62,7,Comando Central,comunicação,0x1201,0.3,30.1,89.6,0.34,28.14,1.79,45.5,27.83,ativo,5,
+63,7,Habitação Alfa,habitação,0x2101,1.2,44.1,85.9,0.78,27.8,1.23,67.5,66.96,ativo,3,
+64,7,Habitação Beta,habitação,0x2201,1.6,61.5,93.3,0.1,27.56,1.28,72.5,77.89,ativo,3,
+65,7,Estufa Hidropônica,agricultura,0x3101,2.1,61.9,86.8,1.09,28.59,1.57,82.5,93.96,ativo,3,
+66,7,Laboratório Geológico,laboratório,0x4101,3.5,74.4,84.6,1.35,27.99,1.53,97.5,114.12,ativo,2,
+67,7,Centro Médico,suporte médico,0x5101,0.8,17.7,83.5,1.24,27.91,1.79,52.5,43.03,manutenção,5,Manutenção programada
+68,7,Data Center,armazenamento de dados,0x6101,0.5,61.3,86.4,0.95,28.06,2.28,39.5,48.82,ativo,2,
+69,7,Controle Ambiental,suporte de vida,0x7101,0.9,34.4,88.0,1.62,28.07,1.85,49.5,45.21,ativo,5,
+70,7,Antena Espaço Profundo,comunicação interplanetária,0x8101,228103448.0,54.0,87.3,0.69,28.13,6.17,762071.2,762537.6,manutenção,5,Manutenção programada
+71,8,Comunicação Orbital,comunicação,0x1101,2.4,74.5,89.5,0.58,28.14,2.55,57.5,78.06,alerta,4,Latência acima do previsto
+72,8,Comando Central,comunicação,0x1201,0.3,49.0,80.0,1.35,28.41,1.9,45.5,48.93,ativo,5,
+73,8,Habitação Alfa,habitação,0x2101,1.2,5.0,85.8,1.83,28.13,1.16,67.5,48.23,ativo,3,
+74,8,Habitação Beta,habitação,0x2201,1.6,49.6,88.4,0.77,28.24,1.22,72.5,77.81,ativo,3,
+75,8,Estufa Hidropônica,agricultura,0x3101,2.1,71.2,88.4,0.5,27.73,1.51,82.5,96.72,ativo,3,
+76,8,Laboratório Geológico,laboratório,0x4101,3.5,47.0,93.8,0.18,28.08,1.64,97.5,94.05,ativo,2,
+77,8,Centro Médico,suporte médico,0x5101,0.8,46.9,89.8,0.15,28.19,1.55,52.5,56.37,ativo,5,
+78,8,Data Center,armazenamento de dados,0x6101,0.5,40.8,81.3,1.4,28.07,2.18,39.5,39.61,ativo,2,
+79,8,Controle Ambiental,suporte de vida,0x7101,0.9,58.7,84.0,1.54,28.2,1.74,49.5,62.86,ativo,5,
+80,8,Antena Espaço Profundo,comunicação interplanetária,0x8101,228620690.0,91.6,87.7,0.79,27.77,6.1,763796.53,766785.42,alerta,5,Atraso extra no enlace Terra-Marte
+81,9,Comunicação Orbital,comunicação,0x1101,2.4,39.0,87.7,0.97,28.02,2.48,57.5,58.0,ativo,4,
+82,9,Comando Central,comunicação,0x1201,0.3,52.1,85.4,1.32,28.06,1.64,45.5,51.5,ativo,5,
+83,9,Habitação Alfa,habitação,0x2101,1.2,38.8,88.8,0.31,28.4,1.29,67.5,61.58,ativo,3,
+84,9,Habitação Beta,habitação,0x2201,1.6,11.6,83.4,1.31,27.68,1.25,72.5,63.14,ativo,3,
+85,9,Estufa Hidropônica,agricultura,0x3101,2.1,39.9,85.4,1.64,27.63,1.42,82.5,89.4,ativo,3,
+86,9,Laboratório Geológico,laboratório,0x4101,3.5,47.4,81.4,1.25,27.87,1.45,97.5,105.43,ativo,2,
+87,9,Centro Médico,suporte médico,0x5101,0.8,23.1,90.1,0.42,28.38,1.54,52.5,35.35,ativo,5,
+88,9,Data Center,armazenamento de dados,0x6101,0.5,68.7,89.8,0.12,25.0,2.06,39.5,52.74,alerta,2,Queda de tensão no transmissor
+89,9,Controle Ambiental,suporte de vida,0x7101,0.9,63.0,84.8,0.84,28.21,1.72,49.5,59.13,manutenção,5,Manutenção programada
+90,9,Antena Espaço Profundo,comunicação interplanetária,0x8101,229137931.0,47.1,88.1,0.91,27.81,6.68,765521.87,765688.5,ativo,5,
+91,10,Comunicação Orbital,comunicação,0x1101,2.4,47.6,93.5,0.0,27.28,2.85,57.5,65.79,ativo,4,
+92,10,Comando Central,comunicação,0x1201,0.3,20.1,86.8,0.9,27.94,1.68,45.5,33.59,ativo,5,
+93,10,Habitação Alfa,habitação,0x2101,1.2,28.1,90.8,1.12,28.05,1.18,67.5,56.5,ativo,3,
+94,10,Habitação Beta,habitação,0x2201,1.6,23.8,88.7,0.64,28.55,1.19,72.5,65.99,ativo,3,
+95,10,Estufa Hidropônica,agricultura,0x3101,2.1,65.6,84.5,1.0,28.05,1.5,82.5,95.23,ativo,3,
+96,10,Laboratório Geológico,laboratório,0x4101,3.5,54.7,84.4,1.17,27.98,1.35,97.5,98.9,ativo,2,
+97,10,Centro Médico,suporte médico,0x5101,0.8,45.6,,2.31,28.08,1.53,52.5,54.24,ativo,5,
+98,10,Data Center,armazenamento de dados,0x6101,0.5,61.3,97.5,0.0,28.12,2.18,39.5,47.65,ativo,2,
+99,10,Controle Ambiental,suporte de vida,0x7101,0.9,77.5,85.9,0.96,27.86,1.78,49.5,76.11,alerta,5,Latência acima do previsto
+100,10,Antena Espaço Profundo,comunicação interplanetária,0x8101,229655172.0,47.4,89.3,0.62,28.29,5.62,767247.2,767340.52,ativo,5,
+101,11,Comunicação Orbital,comunicação,0x1101,2.4,40.9,78.7,1.66,27.73,2.57,57.5,64.53,ativo,4,
+102,11,Comando Central,comunicação,0x1201,0.3,36.4,87.8,1.18,27.71,,45.5,43.5,ativo,5,
+103,11,Habitação Alfa,habitação,0x2101,1.2,66.7,87.9,1.06,27.69,1.2,67.5,80.23,ativo,3,
+104,11,Habitação Beta,habitação,0x2201,1.6,26.9,90.7,0.41,27.69,1.19,72.5,64.43,ativo,3,
+105,11,Estufa Hidropônica,agricultura,0x3101,2.1,28.1,81.6,2.04,28.08,1.46,82.5,72.55,ativo,3,
+106,11,Laboratório Geológico,laboratório,0x4101,3.5,63.1,88.2,0.98,27.94,1.53,97.5,109.29,ativo,2,
+107,11,Centro Médico,suporte médico,0x5101,0.8,69.5,81.5,0.94,28.3,1.71,52.5,65.74,ativo,5,
+108,11,Data Center,armazenamento de dados,0x6101,0.5,56.8,91.7,0.93,28.15,2.15,39.5,42.01,ativo,2,
+109,11,Controle Ambiental,suporte de vida,0x7101,0.9,49.6,83.9,1.94,28.54,1.82,49.5,52.34,ativo,5,
+110,11,Antena Espaço Profundo,comunicação interplanetária,0x8101,230172414.0,66.5,89.8,1.0,28.19,6.79,768972.53,769431.76,ativo,5,
+111,12,Comunicação Orbital,comunicação,0x1101,2.4,61.1,68.9,5.16,27.83,2.4,57.5,89.38,alerta,4,Qualidade de sinal baixa
+112,12,Comando Central,comunicação,0x1201,0.3,79.5,77.0,4.56,28.0,1.82,45.5,73.22,alerta,5,Perda de pacotes elevada
+113,12,Habitação Alfa,habitação,0x2101,1.2,56.1,70.8,4.89,27.98,1.33,67.5,91.98,alerta,3,Perda de pacotes elevada
+114,12,Habitação Beta,habitação,0x2201,1.6,59.5,76.2,4.2,27.68,1.19,72.5,89.19,alerta,3,Perda de pacotes elevada
+115,12,Estufa Hidropônica,agricultura,0x3101,2.1,64.2,70.6,4.39,27.96,1.48,82.5,111.59,alerta,3,Perda de pacotes elevada
+116,12,Laboratório Geológico,laboratório,0x4101,3.5,55.7,72.6,4.36,28.1,1.53,97.5,121.62,alerta,2,Perda de pacotes elevada
+117,12,Centro Médico,suporte médico,0x5101,0.8,52.6,71.0,4.78,28.07,1.58,52.5,68.72,alerta,5,Perda de pacotes elevada
+118,12,Data Center,armazenamento de dados,0x6101,0.5,45.9,73.5,4.67,27.88,2.23,39.5,54.03,alerta,2,Perda de pacotes elevada
+119,12,Controle Ambiental,suporte de vida,0x7101,0.9,46.3,81.8,3.24,27.37,1.51,49.5,57.54,ativo,5,
+120,12,Antena Espaço Profundo,comunicação interplanetária,0x8101,230689655.0,52.9,80.9,2.9,28.12,7.11,770697.86,770715.92,ativo,5,
+121,13,Comunicação Orbital,comunicação,0x1101,2.4,48.2,73.0,4.37,27.9,2.82,57.5,168.16,alerta,4,Perda de pacotes elevada
+122,13,Comando Central,comunicação,0x1201,0.3,55.6,83.0,3.41,28.04,1.84,45.5,71.61,alerta,5,Latência acima do previsto
+123,13,Habitação Alfa,habitação,0x2101,1.2,42.3,79.9,3.71,27.85,1.27,67.5,74.69,ativo,3,
+124,13,Habitação Beta,habitação,0x2201,1.6,55.3,77.3,4.25,27.42,1.25,72.5,85.39,alerta,3,Perda de pacotes elevada
+125,13,Estufa Hidropônica,agricultura,0x3101,2.1,53.9,69.1,4.9,28.25,1.29,82.5,101.09,alerta,3,Qualidade de sinal baixa
+126,13,Laboratório Geológico,laboratório,0x4101,3.5,54.2,77.1,3.84,28.22,1.51,97.5,105.38,ativo,2,
+127,13,Centro Médico,suporte médico,0x5101,0.8,54.8,75.1,4.36,27.99,1.62,52.5,73.83,alerta,5,Perda de pacotes elevada
+128,13,Data Center,armazenamento de dados,0x6101,0.5,33.9,71.6,4.89,28.37,2.14,39.5,36.8,alerta,2,Perda de pacotes elevada
+129,13,Controle Ambiental,suporte de vida,0x7101,0.9,40.0,73.8,4.43,28.01,1.67,49.5,62.98,alerta,5,Perda de pacotes elevada
+130,13,Antena Espaço Profundo,comunicação interplanetária,0x8101,231206897.0,39.5,77.9,3.59,28.12,6.54,772423.19,772686.33,ativo,5,
+131,14,Comunicação Orbital,comunicação,0x1101,2.4,83.6,85.5,1.76,27.93,2.4,57.5,83.77,alerta,4,Latência acima do previsto
+132,14,Comando Central,comunicação,0x1201,0.3,41.5,89.6,0.82,27.81,1.91,45.5,47.54,ativo,5,
+133,14,Habitação Alfa,habitação,0x2101,1.2,37.7,90.1,0.99,27.44,1.18,67.5,59.33,ativo,3,
+134,14,Habitação Beta,habitação,0x2201,1.6,44.7,87.3,1.48,27.95,1.23,72.5,73.05,ativo,3,
+135,14,Estufa Hidropônica,agricultura,0x3101,2.1,55.1,80.7,2.07,28.49,1.43,82.5,96.08,ativo,3,
+136,14,Laboratório Geológico,laboratório,0x4101,3.5,53.4,91.8,0.65,28.06,1.58,97.5,102.94,ativo,2,
+137,14,Centro Médico,suporte médico,0x5101,0.8,60.2,86.6,1.11,27.12,1.64,52.5,48.2,ativo,5,
+138,14,Data Center,armazenamento de dados,0x6101,0.5,63.1,89.9,0.26,27.79,2.38,39.5,46.75,ativo,2,
+139,14,Controle Ambiental,suporte de vida,0x7101,0.9,55.0,89.6,1.13,28.04,1.6,49.5,144.85,alerta,5,Latência acima do previsto
+140,14,Antena Espaço Profundo,comunicação interplanetária,0x8101,231724138.0,50.4,85.0,1.47,28.01,6.39,774148.52,774421.98,ativo,5,
+141,15,Comunicação Orbital,comunicação,0x1101,2.4,59.0,90.5,0.24,27.69,2.77,57.5,62.33,ativo,4,
+142,15,Comando Central,comunicação,0x1201,0.3,63.0,89.9,0.16,28.07,1.88,45.5,55.91,ativo,5,
+143,15,Habitação Alfa,habitação,0x2101,1.2,29.7,89.3,0.59,27.86,1.26,67.5,63.42,ativo,3,
+144,15,Habitação Beta,habitação,0x2201,1.6,78.7,87.6,1.0,28.23,1.21,72.5,93.82,manutenção,3,Manutenção programada
+145,15,Estufa Hidropônica,agricultura,0x3101,2.1,53.9,77.9,1.93,28.19,1.4,82.5,95.06,manutenção,3,Manutenção programada
+146,15,Laboratório Geológico,laboratório,0x4101,3.5,48.3,91.0,0.59,27.63,1.63,97.5,96.02,ativo,2,
+147,15,Centro Médico,suporte médico,0x5101,0.8,36.2,83.9,1.35,27.92,1.57,52.5,52.26,ativo,5,
+148,15,Data Center,armazenamento de dados,0x6101,0.5,60.7,89.6,0.83,27.37,2.15,39.5,39.72,ativo,2,
+149,15,Controle Ambiental,suporte de vida,0x7101,0.9,54.9,92.2,0.69,28.06,1.65,49.5,55.77,ativo,5,
+150,15,Antena Espaço Profundo,comunicação interplanetária,0x8101,232241379.0,55.0,91.9,0.2,28.24,6.76,775873.86,775935.16,ativo,5,
+151,16,Comunicação Orbital,comunicação,0x1101,2.4,72.5,90.8,0.54,27.77,2.47,57.5,70.41,ativo,4,
+152,16,Comando Central,comunicação,0x1201,0.3,37.8,89.8,0.26,27.94,1.81,45.5,49.31,ativo,5,
+153,16,Habitação Alfa,habitação,0x2101,1.2,81.5,88.6,0.89,28.04,1.23,67.5,88.81,ativo,3,
+154,16,Habitação Beta,habitação,0x2201,1.6,46.8,92.5,0.1,27.98,1.12,72.5,72.46,ativo,3,
+155,16,Estufa Hidropônica,agricultura,0x3101,2.1,53.6,77.7,1.74,27.93,1.27,82.5,89.55,ativo,3,
+156,16,Laboratório Geológico,laboratório,0x4101,3.5,78.7,99.2,0.0,28.43,1.52,97.5,111.66,ativo,2,
+157,16,Centro Médico,suporte médico,0x5101,0.8,56.1,88.4,0.66,27.58,1.45,52.5,61.41,ativo,5,
+158,16,Data Center,armazenamento de dados,0x6101,0.5,44.3,88.0,1.07,28.05,2.11,39.5,44.55,ativo,2,
+159,16,Controle Ambiental,suporte de vida,0x7101,0.9,63.9,91.9,0.75,28.34,1.76,49.5,61.81,ativo,5,
+160,16,Antena Espaço Profundo,comunicação interplanetária,0x8101,232758621.0,35.2,90.8,0.1,27.76,7.01,777599.19,778109.24,ativo,5,
+161,17,Comunicação Orbital,comunicação,0x1101,2.4,81.8,86.9,0.62,24.6,2.62,57.5,79.96,alerta,4,Queda de tensão no transmissor
+162,17,Comando Central,comunicação,0x1201,0.3,48.5,89.4,0.37,28.14,1.8,45.5,43.31,ativo,5,
+163,17,Habitação Alfa,habitação,0x2101,1.2,51.7,86.9,1.5,27.97,1.18,67.5,64.95,ativo,3,
+164,17,Habitação Beta,habitação,0x2201,1.6,50.3,85.3,1.58,27.95,1.29,72.5,78.48,ativo,3,
+165,17,Estufa Hidropônica,agricultura,0x3101,2.1,53.4,77.0,2.67,27.3,1.23,82.5,93.02,ativo,3,
+166,17,Laboratório Geológico,laboratório,0x4101,3.5,67.4,89.9,0.5,28.31,1.59,97.5,110.47,ativo,2,
+167,17,Centro Médico,suporte médico,0x5101,0.8,59.9,85.8,1.32,28.03,1.6,52.5,69.21,ativo,5,
+168,17,Data Center,armazenamento de dados,0x6101,0.5,29.5,83.3,1.3,27.92,2.0,39.5,28.96,ativo,2,
+169,17,Controle Ambiental,suporte de vida,0x7101,0.9,98.0,95.2,0.0,27.89,1.58,49.5,69.6,alerta,5,Latência acima do previsto
+170,17,Antena Espaço Profundo,comunicação interplanetária,0x8101,233275862.0,37.0,87.7,0.4,27.77,6.56,779324.52,779716.07,ativo,5,
+171,18,Comunicação Orbital,comunicação,0x1101,2.4,62.5,82.7,1.73,27.76,2.7,57.5,71.73,ativo,4,
+172,18,Comando Central,comunicação,0x1201,0.3,49.3,89.5,0.85,27.96,1.97,45.5,51.75,ativo,5,
+173,18,Habitação Alfa,habitação,0x2101,1.2,68.5,95.7,0.5,27.63,1.13,67.5,84.28,ativo,3,
+174,18,Habitação Beta,habitação,0x2201,1.6,31.2,86.1,1.2,27.97,1.15,72.5,63.05,ativo,3,
+175,18,Estufa Hidropônica,agricultura,0x3101,2.1,39.2,79.4,1.96,28.27,1.36,82.5,83.63,ativo,3,
+176,18,Laboratório Geológico,laboratório,0x4101,3.5,7.3,82.5,0.96,27.33,1.39,97.5,82.46,ativo,2,
+177,18,Centro Médico,suporte médico,0x5101,0.8,78.2,89.6,0.88,27.73,1.65,52.5,74.98,alerta,5,Latência acima do previsto
+178,18,Data Center,armazenamento de dados,0x6101,0.5,65.1,90.3,0.4,27.66,2.04,39.5,50.35,ativo,2,
+179,18,Controle Ambiental,suporte de vida,0x7101,0.9,40.7,88.1,1.0,28.19,1.86,49.5,52.46,ativo,5,
+180,18,Antena Espaço Profundo,comunicação interplanetária,0x8101,233793103.0,85.3,85.9,1.41,28.02,6.34,781049.85,780897.93,ativo,5,
+181,19,Comunicação Orbital,comunicação,0x1101,2.4,51.9,81.8,1.88,28.46,2.48,57.5,67.25,ativo,4,
+182,19,Comando Central,comunicação,0x1201,0.3,43.7,91.1,0.46,28.52,1.75,45.5,46.99,ativo,5,
+183,19,Habitação Alfa,habitação,0x2101,1.2,69.3,86.2,1.04,27.97,1.14,67.5,85.9,ativo,3,
+184,19,Habitação Beta,habitação,0x2201,1.6,65.7,94.1,0.54,27.89,1.23,72.5,121.72,alerta,3,Latência acima do previsto
+185,19,Estufa Hidropônica,agricultura,0x3101,2.1,84.2,75.5,2.27,28.36,1.22,82.5,105.29,ativo,3,
+186,19,Laboratório Geológico,laboratório,0x4101,3.5,56.1,89.0,0.32,27.99,1.68,97.5,106.19,ativo,2,
+187,19,Centro Médico,suporte médico,0x5101,0.8,47.1,86.4,0.39,28.08,1.68,52.5,47.24,ativo,5,
+188,19,Data Center,armazenamento de dados,0x6101,0.5,34.2,84.1,1.32,27.37,2.28,39.5,38.46,ativo,2,
+189,19,Controle Ambiental,suporte de vida,0x7101,0.9,10.3,84.0,1.69,27.17,1.66,49.5,27.21,ativo,5,
+190,19,Antena Espaço Profundo,comunicação interplanetária,0x8101,234310345.0,42.8,89.6,0.82,28.55,6.42,782775.18,783169.19,ativo,5,
+191,20,Comunicação Orbital,comunicação,0x1101,2.4,28.3,92.8,0.04,27.83,2.6,57.5,38.07,ativo,4,
+192,20,Comando Central,comunicação,0x1201,0.3,72.4,89.2,0.22,27.96,1.88,45.5,52.92,ativo,5,
+193,20,Habitação Alfa,habitação,0x2101,1.2,70.8,89.1,0.83,28.56,1.23,67.5,85.34,manutenção,3,Manutenção programada
+194,20,Habitação Beta,habitação,0x2201,1.6,51.2,84.8,1.35,28.13,1.16,72.5,74.33,ativo,3,
+195,20,Estufa Hidropônica,agricultura,0x3101,2.1,60.9,72.9,2.93,27.97,1.38,82.5,103.87,ativo,3,
+196,20,Laboratório Geológico,laboratório,0x4101,3.5,61.3,95.7,0.06,27.89,1.45,97.5,101.56,ativo,2,
+197,20,Centro Médico,suporte médico,0x5101,0.8,48.2,91.7,0.0,28.26,1.56,52.5,53.09,ativo,5,
+198,20,Data Center,armazenamento de dados,0x6101,0.5,78.9,93.0,0.53,27.55,2.31,39.5,59.23,alerta,2,Latência acima do previsto
+199,20,Controle Ambiental,suporte de vida,0x7101,0.9,54.6,89.5,0.83,28.05,1.73,49.5,60.74,ativo,5,
+200,20,Antena Espaço Profundo,comunicação interplanetária,0x8101,234827586.0,5.0,86.7,0.94,27.47,6.54,784500.51,785112.7,ativo,5,
+201,21,Comunicação Orbital,comunicação,0x1101,2.4,35.4,89.3,0.4,27.8,2.83,57.5,48.38,ativo,4,
+202,21,Comando Central,comunicação,0x1201,0.3,21.3,95.4,0.13,27.95,1.86,45.5,21.75,ativo,5,
+203,21,Habitação Alfa,habitação,0x2101,1.2,49.2,87.2,0.79,27.83,1.25,67.5,71.34,ativo,3,
+204,21,Habitação Beta,habitação,0x2201,1.6,54.8,90.1,0.47,28.67,1.09,72.5,82.12,ativo,3,
+205,21,Estufa Hidropônica,agricultura,0x3101,2.1,39.7,76.3,2.54,28.29,1.4,82.5,86.03,ativo,3,
+206,21,Laboratório Geológico,laboratório,0x4101,3.5,62.0,93.6,0.22,27.73,1.57,97.5,108.33,ativo,2,
+207,21,Centro Médico,suporte médico,0x5101,0.8,68.4,86.9,0.69,27.74,1.44,52.5,67.71,ativo,5,
+208,21,Data Center,armazenamento de dados,0x6101,0.5,47.1,76.2,1.88,28.34,2.11,39.5,48.55,manutenção,2,Manutenção programada
+209,21,Controle Ambiental,suporte de vida,0x7101,0.9,80.9,87.4,1.0,28.7,1.85,49.5,70.46,alerta,5,Latência acima do previsto
+210,21,Antena Espaço Profundo,comunicação interplanetária,0x8101,235344828.0,49.1,90.0,0.56,27.88,7.07,786225.84,789497.29,alerta,5,Atraso extra no enlace Terra-Marte
+211,22,Comunicação Orbital,comunicação,0x1101,2.4,96.4,88.4,1.33,28.11,2.75,57.5,86.42,alerta,4,Latência acima do previsto
+212,22,Comando Central,comunicação,0x1201,0.3,63.3,92.0,0.38,27.61,1.65,45.5,48.58,ativo,5,
+213,22,Habitação Alfa,habitação,0x2101,1.2,57.0,92.5,0.3,27.32,1.19,67.5,71.5,ativo,3,
+214,22,Habitação Beta,habitação,0x2201,1.6,28.8,86.4,1.54,28.13,1.24,72.5,65.3,ativo,3,
+215,22,Estufa Hidropônica,agricultura,0x3101,2.1,69.0,70.8,3.17,27.59,1.43,82.5,108.43,ativo,3,
+216,22,Laboratório Geológico,laboratório,0x4101,3.5,54.6,85.5,0.82,27.89,1.4,97.5,105.5,ativo,2,
+217,22,Centro Médico,suporte médico,0x5101,0.8,67.8,83.3,1.24,24.9,1.73,52.5,70.09,alerta,5,Queda de tensão no transmissor
+218,22,Data Center,armazenamento de dados,0x6101,0.5,64.0,79.6,1.84,28.6,2.22,39.5,56.23,alerta,2,Latência acima do previsto
+219,22,Controle Ambiental,suporte de vida,0x7101,0.9,71.1,80.0,1.29,28.06,1.63,49.5,74.26,alerta,5,Latência acima do previsto
+220,22,Antena Espaço Profundo,comunicação interplanetária,0x8101,235862069.0,20.2,82.9,0.62,27.93,6.43,787951.18,788145.06,ativo,5,
+221,23,Comunicação Orbital,comunicação,0x1101,2.4,74.4,92.8,0.21,27.36,2.7,57.5,74.57,ativo,4,
+222,23,Comando Central,comunicação,0x1201,0.3,72.7,83.3,2.0,27.71,1.88,45.5,59.43,manutenção,5,Manutenção programada
+223,23,Habitação Alfa,habitação,0x2101,1.2,82.3,87.0,1.22,28.07,1.19,67.5,96.58,alerta,3,Latência acima do previsto
+224,23,Habitação Beta,habitação,0x2201,1.6,22.9,84.8,1.39,28.12,1.09,72.5,58.73,ativo,3,
+225,23,Estufa Hidropônica,agricultura,0x3101,2.1,48.4,68.9,2.94,27.78,1.46,82.5,98.79,alerta,3,Qualidade de sinal baixa
+226,23,Laboratório Geológico,laboratório,0x4101,3.5,47.9,88.6,0.53,27.66,1.42,97.5,96.04,ativo,2,
+227,23,Centro Médico,suporte médico,0x5101,0.8,57.9,90.9,0.01,28.01,1.58,52.5,59.07,ativo,5,
+228,23,Data Center,armazenamento de dados,0x6101,0.5,28.8,83.0,1.45,28.31,1.91,39.5,34.31,ativo,2,
+229,23,Controle Ambiental,suporte de vida,0x7101,0.9,52.2,90.2,0.36,27.96,1.53,49.5,42.88,ativo,5,
+230,23,Antena Espaço Profundo,comunicação interplanetária,0x8101,236379310.0,37.3,86.2,0.64,27.58,6.43,789676.51,789794.11,ativo,5,
+231,24,Comunicação Orbital,comunicação,0x1101,2.4,61.8,89.8,0.72,28.07,2.85,57.5,62.57,ativo,4,
+232,24,Comando Central,comunicação,0x1201,0.3,75.4,93.1,0.0,27.91,1.95,45.5,62.45,alerta,5,Latência acima do previsto
+233,24,Habitação Alfa,habitação,0x2101,1.2,51.1,86.5,1.11,27.92,1.2,67.5,72.67,ativo,3,
+234,24,Habitação Beta,habitação,0x2201,1.6,64.6,99.7,0.0,28.1,1.15,72.5,80.93,ativo,3,
+235,24,Estufa Hidropônica,agricultura,0x3101,2.1,68.7,71.8,2.85,28.34,1.2,82.5,112.91,alerta,3,Latência acima do previsto
+236,24,Laboratório Geológico,laboratório,0x4101,3.5,74.4,83.1,1.18,28.04,1.5,97.5,118.78,ativo,2,
+237,24,Centro Médico,suporte médico,0x5101,0.8,23.2,91.9,0.38,27.94,1.46,52.5,39.28,ativo,5,
+238,24,Data Center,armazenamento de dados,0x6101,0.5,46.7,90.6,0.08,28.02,2.18,39.5,42.91,ativo,2,
+239,24,Controle Ambiental,suporte de vida,0x7101,0.9,42.5,86.0,1.47,28.16,1.66,49.5,49.15,ativo,5,
+240,24,Antena Espaço Profundo,comunicação interplanetária,0x8101,236896552.0,62.0,81.0,1.91,28.04,7.43,791401.84,791426.81,ativo,5,
+241,25,Comunicação Orbital,comunicação,0x1101,2.4,53.2,95.2,0.33,27.79,2.63,57.5,59.0,ativo,4,
+242,25,Comando Central,comunicação,0x1201,0.3,42.4,87.6,0.4,28.04,1.85,45.5,42.43,ativo,5,
+243,25,Habitação Alfa,habitação,0x2101,1.2,72.8,89.5,0.45,27.92,1.09,67.5,78.91,ativo,3,
+244,25,Habitação Beta,habitação,0x2201,1.6,77.1,85.4,1.34,27.84,1.22,72.5,93.22,ativo,3,
+245,25,Estufa Hidropônica,agricultura,0x3101,2.1,45.4,66.6,2.99,27.84,1.3,82.5,96.27,alerta,3,Qualidade de sinal baixa
+246,25,Laboratório Geológico,laboratório,0x4101,3.5,97.7,81.0,1.74,27.66,1.46,97.5,134.06,manutenção,2,Manutenção programada
+247,25,Centro Médico,suporte médico,0x5101,0.8,59.3,95.6,0.0,28.08,1.7,52.5,56.19,ativo,5,
+248,25,Data Center,armazenamento de dados,0x6101,0.5,14.0,90.6,0.5,27.7,2.22,39.5,17.14,ativo,2,
+249,25,Controle Ambiental,suporte de vida,0x7101,0.9,65.9,82.6,1.8,27.58,1.63,49.5,73.66,alerta,5,Latência acima do previsto
+250,25,Antena Espaço Profundo,comunicação interplanetária,0x8101,237413793.0,56.8,84.2,1.13,28.02,6.51,793127.17,793404.45,ativo,5,
+251,26,Comunicação Orbital,comunicação,0x1101,2.4,54.4,87.1,0.51,27.85,2.74,57.5,57.46,ativo,4,
+252,26,Comando Central,comunicação,0x1201,0.3,40.2,88.4,0.67,28.44,1.85,45.5,37.03,ativo,5,
+253,26,Habitação Alfa,habitação,0x2101,1.2,41.1,85.7,1.21,27.85,1.26,67.5,63.72,ativo,3,
+254,26,Habitação Beta,habitação,0x2201,1.6,43.2,85.7,1.44,28.19,1.32,72.5,82.61,ativo,3,
+255,26,Estufa Hidropônica,agricultura,0x3101,2.1,56.3,66.2,3.22,27.81,1.31,82.5,97.56,alerta,3,Qualidade de sinal baixa
+256,26,Laboratório Geológico,laboratório,0x4101,3.5,33.1,91.4,0.16,28.84,1.46,97.5,88.24,ativo,2,
+257,26,Centro Médico,suporte médico,0x5101,0.8,85.7,92.5,0.39,27.6,1.62,52.5,70.11,ativo,5,
+258,26,Data Center,armazenamento de dados,0x6101,0.5,69.6,88.4,0.06,27.7,2.29,39.5,57.53,alerta,2,Latência acima do previsto
+259,26,Controle Ambiental,suporte de vida,0x7101,0.9,26.3,89.2,1.0,27.5,1.7,49.5,39.43,ativo,5,
+260,26,Antena Espaço Profundo,comunicação interplanetária,0x8101,237931034.0,21.7,86.7,0.9,27.96,6.28,794852.5,795041.75,ativo,5,
+261,27,Comunicação Orbital,comunicação,0x1101,2.4,54.3,89.8,0.54,27.88,2.61,57.5,54.29,ativo,4,
+262,27,Comando Central,comunicação,0x1201,0.3,55.0,88.2,1.11,27.41,1.59,45.5,53.2,ativo,5,
+263,27,Habitação Alfa,habitação,0x2101,1.2,58.1,86.2,1.26,28.28,1.23,67.5,75.91,ativo,3,
+264,27,Habitação Beta,habitação,0x2201,1.6,68.8,92.9,0.45,27.74,1.25,72.5,87.88,ativo,3,
+265,27,Estufa Hidropônica,agricultura,0x3101,2.1,39.2,66.7,3.62,28.02,1.31,82.5,93.87,alerta,3,Qualidade de sinal baixa
+266,27,Laboratório Geológico,laboratório,0x4101,3.5,56.6,88.9,0.66,28.44,1.42,97.5,101.56,ativo,2,
+267,27,Centro Médico,suporte médico,0x5101,0.8,70.8,82.0,1.17,27.39,1.6,52.5,122.22,alerta,5,Latência acima do previsto
+268,27,Data Center,armazenamento de dados,0x6101,0.5,43.5,88.9,0.64,28.2,2.26,39.5,117.65,alerta,2,Latência acima do previsto
+269,27,Controle Ambiental,suporte de vida,0x7101,0.9,62.1,82.4,1.71,27.67,1.84,49.5,67.67,alerta,5,Latência acima do previsto
+270,27,Antena Espaço Profundo,comunicação interplanetária,0x8101,238448276.0,57.8,87.2,1.14,27.89,6.59,796577.83,797095.82,ativo,5,
+271,28,Comunicação Orbital,comunicação,0x1101,2.4,44.9,85.5,0.78,27.68,2.31,57.5,61.22,ativo,4,
+272,28,Comando Central,comunicação,0x1201,0.3,80.7,81.5,1.84,28.43,1.75,45.5,71.7,alerta,5,Latência acima do previsto
+273,28,Habitação Alfa,habitação,0x2101,1.2,59.8,83.7,1.41,27.53,1.24,67.5,83.24,ativo,3,
+274,28,Habitação Beta,habitação,0x2201,1.6,34.5,79.4,1.79,27.83,1.09,72.5,73.09,ativo,3,
+275,28,Estufa Hidropônica,agricultura,0x3101,2.1,35.6,65.2,3.9,28.18,1.39,82.5,93.6,alerta,3,Qualidade de sinal baixa
+276,28,Laboratório Geológico,laboratório,0x4101,3.5,55.6,88.6,0.63,28.13,1.43,97.5,105.39,ativo,2,
+277,28,Centro Médico,suporte médico,0x5101,0.8,5.0,92.8,0.0,27.82,1.7,52.5,24.01,ativo,5,
+278,28,Data Center,armazenamento de dados,0x6101,0.5,35.3,92.1,0.0,28.34,2.19,39.5,25.93,ativo,2,
+279,28,Controle Ambiental,suporte de vida,0x7101,0.9,36.7,91.5,0.64,27.48,1.66,49.5,39.59,ativo,5,
+280,28,Antena Espaço Profundo,comunicação interplanetária,0x8101,238965517.0,30.7,94.4,0.06,27.65,6.24,798303.17,798402.76,ativo,5,
+281,29,Comunicação Orbital,comunicação,0x1101,2.4,32.1,88.4,0.43,27.35,2.54,57.5,41.69,ativo,4,
+282,29,Comando Central,comunicação,0x1201,0.3,38.6,84.5,1.86,28.02,1.83,45.5,37.96,ativo,5,
+283,29,Habitação Alfa,habitação,0x2101,1.2,58.9,83.9,1.6,27.64,1.18,67.5,76.57,ativo,3,
+284,29,Habitação Beta,habitação,0x2201,1.6,43.5,86.9,0.9,27.78,1.23,72.5,73.16,ativo,3,
+285,29,Estufa Hidropônica,agricultura,0x3101,2.1,47.3,66.2,3.39,27.91,1.41,82.5,103.49,alerta,3,Qualidade de sinal baixa
+286,29,Laboratório Geológico,laboratório,0x4101,3.5,68.9,80.4,1.81,28.47,1.54,97.5,117.23,ativo,2,
+287,29,Centro Médico,suporte médico,0x5101,0.8,55.6,87.0,0.73,27.91,1.62,52.5,56.02,ativo,5,
+288,29,Data Center,armazenamento de dados,0x6101,0.5,30.5,89.6,0.82,28.07,2.33,39.5,30.7,ativo,2,
+289,29,Controle Ambiental,suporte de vida,0x7101,0.9,60.5,87.6,0.72,28.66,1.65,49.5,56.15,ativo,5,
+290,29,Antena Espaço Profundo,comunicação interplanetária,0x8101,239482759.0,59.5,82.4,1.85,27.97,6.07,800028.5,800625.69,ativo,5,
+291,30,Comunicação Orbital,comunicação,0x1101,2.4,66.3,82.9,1.98,28.2,2.6,57.5,80.8,alerta,4,Latência acima do previsto
+292,30,Comando Central,comunicação,0x1201,0.3,54.5,85.4,1.33,28.14,1.8,45.5,50.07,ativo,5,
+293,30,Habitação Alfa,habitação,0x2101,1.2,53.7,82.7,1.04,28.17,1.01,67.5,75.96,ativo,3,
+294,30,Habitação Beta,habitação,0x2201,1.6,78.5,86.0,1.27,27.88,1.21,72.5,97.27,ativo,3,
+295,30,Estufa Hidropônica,agricultura,0x3101,2.1,72.9,62.5,3.99,28.28,1.46,82.5,122.27,alerta,3,Qualidade de sinal baixa
+296,30,Laboratório Geológico,laboratório,0x4101,3.5,30.2,84.0,1.52,28.15,1.51,97.5,151.72,alerta,2,Latência acima do previsto
+297,30,Centro Médico,suporte médico,0x5101,0.8,75.9,99.4,0.0,28.17,1.55,52.5,58.23,ativo,5,
+298,30,Data Center,armazenamento de dados,0x6101,0.5,35.3,82.2,2.05,28.08,2.25,39.5,,ativo,2,
+299,30,Controle Ambiental,suporte de vida,0x7101,0.9,72.4,87.9,1.01,27.94,1.67,49.5,60.81,ativo,5,
+300,30,Antena Espaço Profundo,comunicação interplanetária,0x8101,240000000.0,50.3,88.2,0.43,27.99,6.52,801753.83,801514.83,ativo,5,
+61,7,Comunicação Orbital,comunicação,0x1101,2.4,39.9,85.6,0.68,27.73,2.54,57.5,58.31,manutenção,4,Manutenção programada
