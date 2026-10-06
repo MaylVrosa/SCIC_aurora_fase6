@@ -1,0 +1,513 @@
+SCIC - Sistema de Comunicação Interplanetária da Colônia Aurora Siger
+Exemplos de execução: saída completa de  python codigo_fonte.py --demo
+
+O modo --demo roda as 10 opções do menu em sequência usando os valores padrão
+de cada pergunta (o valor entre colchetes). No menu interativo, o usuário digita
+esses valores ou aperta Enter para aceitar o padrão.
+Os tempos dos benchmarks (heap x lista e trie x busca linear) variam conforme o computador.
+
+==============================================================================
+ 1 - Carregar ou cadastrar dados da colônia
+==============================================================================
+Arquivo: dados_aurora_siger.csv
+Linhas lidas: 301  |  linhas válidas após a limpeza: 299
+  - duplicadas removidas: 1
+  - sem latência observada (removidas): 1
+  - vazios completados com a mediana do módulo: qualidade_sinal_pct (2), corrente_a (1)
+  - percentuais fora de 0 a 100 corrigidos: 0
+Módulos: 10  |  sóis: 30  |  status: ativo 231, alerta 58, manutenção 10
+
+-- Estrutura em Python: DataFrame do Pandas ----------------------------------
+299 linhas e 22 colunas: as 16 do CSV e 6 calculadas pelo sistema (potência,
+consumo, queda de tensão e erros).
+ id_registro  ciclo              modulo codigo_sensor latencia_prevista_ms latencia_observada_ms status
+           1      1 Comunicação Orbital        0x1101                 57,5                  52,6  ativo
+           2      1     Comando Central        0x1201                 45,5                  46,1  ativo
+           3      1      Habitação Alfa        0x2101                 67,5                  71,4  ativo
+           4      1      Habitação Beta        0x2201                 72,5                  82,1  ativo
+           5      1  Estufa Hidropônica        0x3101                 82,5                  73,7  ativo
+
+-- Cadastro de um novo registro (demonstração) -------------------------------
+Módulo (pode digitar só o começo) [Centro Médico]: Centro Médico
+  Módulo escolhido: Centro Médico
+Sol (ciclo) [31]: 31
+Carga da rede (%) [60]: 60
+Qualidade do sinal (%) [85]: 85
+Perda de pacotes (%) [1]: 1
+Tensão do transmissor (V) [28]: 28
+Corrente do transmissor (A) [1,6]: 1,6
+Latência observada (ms) [60,2]: 60,2
+Status (ativo/manutenção/alerta) [ativo]: ativo
+Mensagem do alerta (opcional): 
+
+Registro 301 cadastrado: Centro Médico, sol 31, status ativo.
+Herdados do módulo: tipo suporte médico, código 0x5101, prioridade 5.
+Calculados: potência 44,8 W; erro da estimativa de engenharia 12,8% (atenção).
+Salvar também no arquivo CSV? (s/n) [n]: n
+Registro mantido só na memória desta sessão.
+Registro de demonstração descartado: a base volta aos 299 registros do CSV.
+
+==============================================================================
+ 2 - Consultar registros operacionais
+==============================================================================
+Deixe em branco para não filtrar. Acentos e maiúsculas não importam.
+Módulo (nome ou parte do nome) [medico]: medico
+Status (ativo, manutenção ou alerta) [alerta]: alerta
+Sol (número): 
+
+9 registro(s) encontrado(s).
+ id  sol        módulo status latência ms erro rel. % tensão V                       mensagem
+ 27    3 Centro Médico alerta        80,9        35,1    27,59     Latência acima do previsto
+ 37    4 Centro Médico alerta        91,7        42,7    27,89     Latência acima do previsto
+ 47    5 Centro Médico alerta        73,5        28,6    27,98     Latência acima do previsto
+ 57    6 Centro Médico alerta       105,8        50,4    28,04     Latência acima do previsto
+117   12 Centro Médico alerta        68,7        23,6    28,07       Perda de pacotes elevada
+127   13 Centro Médico alerta        73,8        28,9    27,99       Perda de pacotes elevada
+177   18 Centro Médico alerta        75,0        30,0    27,73     Latência acima do previsto
+217   22 Centro Médico alerta        70,1        25,1    24,90 Queda de tensão no transmissor
+267   27 Centro Médico alerta       122,2        57,0    27,39     Latência acima do previsto
+
+==============================================================================
+ 3 - Indicadores e erros numéricos
+==============================================================================
+1 Indicadores de comunicação    2 Erro absoluto e relativo
+3 Ponto flutuante (IEEE 754)     4 Euler e Newton    5 Tudo
+Parte [5]: 5
+
+-- Indicadores de comunicação por módulo -------------------------------------
+                       latência média qualidade % perda % disponível %  alertas potência W
+módulo                                                                                    
+Estufa Hidropônica            96,2 ms        77,8    2,22         63,3       10       38,8
+Data Center                   47,8 ms        86,9    1,06         65,5        9       60,8
+Centro Médico                 63,2 ms        87,8    0,94         66,7        9       44,6
+Controle Ambiental            58,7 ms        86,6    1,27         70,0        8       47,6
+Comunicação Orbital           69,3 ms        86,9    1,04         73,3        7       72,8
+Comando Central               49,5 ms        87,3    1,04         83,3        4       50,4
+Habitação Alfa                76,7 ms        87,3    1,11         83,3        4       33,5
+Habitação Beta                78,9 ms        87,1    1,16         86,7        3       33,9
+Laboratório Geológico        106,6 ms        87,9    0,95         90,0        2       41,9
+Antena Espaço Profundo      12,95 min        86,8    1,05         90,0        2      182,1
+Disponível % = sóis com status ativo (sem alerta e sem manutenção).
+
+-- Visão da colônia ----------------------------------------------------------
+Registros: 299  |  em alerta: 19,4%  |  disponibilidade média: 77,2%
+Latência média dos enlaces internos: 72,0 ms
+Enlace Terra-Marte: de 12,54 a 13,36 min (225 a 240 milhões de km neste período)
+Menor disponibilidade: Estufa Hidropônica (63,3% dos sóis com status ativo)
+
+Gráficos salvos em graficos_ou_imagens/:
+  - eda_latencia_por_modulo.png
+  - eda_latencia_vs_carga.png
+  - eda_correlacao.png
+
+-- Erro absoluto e erro relativo (estimativa de engenharia x observado) ------
+erro absoluto = |prevista - observada|            (em ms)
+erro relativo = erro absoluto / |observada| x 100  (em %)
+Faixas do erro relativo: aceitável até 10%, atenção até 25%, crítico acima.
+Módulos que mantêm vidas (prioridade 5) usam faixas mais rígidas: 5% e 15%.
+                       erro abs. médio erro rel. médio % erro rel. máx. % % críticos      faixa
+módulo                                                                                         
+Data Center                    12,9 ms             26,03            130,5         41    crítico
+Centro Médico                  15,9 ms             24,49            118,7         60    crítico
+Controle Ambiental             13,9 ms             21,43             81,9         63    crítico
+Comando Central                 9,3 ms             20,05            109,2         43    crítico
+Comunicação Orbital            15,3 ms             19,27             65,8         30    atenção
+Habitação Alfa                 12,9 ms             15,39             51,2         17    atenção
+Estufa Hidropônica             15,1 ms             15,10             32,5         10    atenção
+Habitação Beta                 10,9 ms             12,84             40,4          7    atenção
+Laboratório Geológico          12,8 ms             11,29             35,7          7    atenção
+Antena Espaço Profundo        473,2 ms              0,06              0,4          0  aceitável
+
+-- Por que o erro relativo é necessário --------------------------------------
+Enlaces internos: erro absoluto médio de 13,2 ms; erro relativo médio de 18,4%.
+Enlace Terra-Marte: erro absoluto médio de 473 ms; erro relativo médio de 0,06%.
+O erro absoluto da Terra é 36 vezes maior, mas o relativo é 302 vezes menor:
+só o erro relativo compara módulos de escalas diferentes.
+Viés: nos enlaces internos a estimativa fica 9,2 ms abaixo do real, em média,
+porque usa a carga planejada (55%) e ignora a carga real e a perda de pacotes.
+
+Gráficos salvos em graficos_ou_imagens/:
+  - erros_relativos_por_modulo.png
+
+-- Ponto flutuante (IEEE 754, precisão dupla) --------------------------------
+0.1 + 0.2              = 0.30000000000000004
+0.1 + 0.2 == 0.3       -> False   |   math.isclose(0.1 + 0.2, 0.3) -> True
+28 V x 1.6 A           = 44.800000000000004 W   (exibido: 44,80 W)
+(1e16 + 1) - 1e16      = 0.0   (o 1 some: faltam dígitos nessa escala)
+épsilon da máquina     = 2.220e-16
+0.1 é guardado com erro absoluto de 5.55e-18 (relativo de 5.55e-17)
+
+Latência de 72.2 ms em 64 bits:
+  sinal 0 | expoente 10000000101 (2^6)
+  mantissa 0010000011001100110011001100110011001100110011001101
+  valor realmente guardado: 72.2000000000000028421709430404007434844970703125
+
+-- Arredondamento na base: propagação para P = V x I -------------------------
+O CSV guarda tensão e corrente com 2 casas (erro de até 0,005). No módulo de
+maior potência, Antena Espaço Profundo (27,97 V x 6,51 A = 182,1 W), o erro
+máximo de P é I x 0,005 + V x 0,005 = 0,17 W, só 0,09% da potência: não muda
+nenhuma decisão.
+Conclusão: comparar floats com tolerância e arredondar só na hora de exibir.
+
+-- Euler: queda da qualidade do sinal da Estufa Hidropônica ------------------
+Modelo: dQ/dt = -taxa x Q, com taxa = 0,0129 por sol e Q0 = 93,1%
+        (ajustados aos dados da base; t = 0 no sol 1)
+Euler:  Q(n+1) = Q(n) + h x (-taxa x Q(n))
+Exata:  Q(t) = Q0 x e^(-taxa x t), comparada com Euler no sol 29 (t = 28)
+passo h (sóis)   Euler   exato erro abs. erro rel. %
+           2,0 64,5483 64,8559    0,3075       0,474
+           1,0 64,7033 64,8559    0,1526       0,235
+           0,5 64,7798 64,8559    0,0760       0,117
+           0,1 64,8407 64,8559    0,0152       0,023
+Passo pela metade, erro pela metade: Euler é um método de 1ª ordem.
+
+-- Newton: em que sol a qualidade cruza 70%? ---------------------------------
+f(t) = Q0 x e^(-taxa x t) - 70 = 0  ->  t = 22,0905 em 5 iterações
+Solução analítica t = ln(Q0/70) / taxa = 22,0905 (confere)
+Previsão: o sinal cruza 70% por volta do sol 23,1.
+
+Gráficos salvos em graficos_ou_imagens/:
+  - euler_qualidade_sinal.png
+
+==============================================================================
+ 4 - Executar uma previsão de latência
+==============================================================================
+Modelo em uso: C (B + módulo), regressão linear treinada com 215 registros dos
+enlaces internos.
+Como o modelo pensa (coeficientes):
+  +1 ponto de carga da rede      -> 0,59 ms
+  +1 ponto de qualidade do sinal -> -0,31 ms
+  +1 ponto de perda de pacotes   -> 3,46 ms
+  + um ajuste fixo para cada módulo (distância e equipamento)
+
+Módulo (pode digitar só o começo) [Centro Médico]: Centro Médico
+  Módulo escolhido: Centro Médico
+Carga da rede (%) [80]: 80
+Qualidade do sinal (%) [85]: 85
+Perda de pacotes (%) [1,5]: 1,5
+
+-- Resultado -----------------------------------------------------------------
+Centro Médico: latência prevista pelo modelo = 82,2 ms
+Estimativa de engenharia para o módulo  = 52,5 ms
+Diferença de 29,7 ms: com a rede a 80% de carga, a estimativa fixa (feita para
+55%) subestima a latência.
+
+==============================================================================
+ 5 - Avaliar o desempenho do modelo
+==============================================================================
+Divisão: 215 registros de treino e 54 de teste (80/20, random_state=42). O
+enlace Terra-Marte fica fora: outra escala de latência.
+
+-- Métricas no teste (AIC, BIC e validação cruzada calculados só no treino) ---
+                                 k    MAE    MSE   RMSE      R2      AIC      BIC CV_RMSE
+modelo                                                                                   
+Média do treino (baseline)       1  20,55  694,0  26,34  -0,018        -        -       -
+Estimativa de engenharia (CSV)   0  16,31  552,7  23,51   0,190        -        -       -
+A: só carga                      2  19,15  584,9  24,18   0,142  1.942,9  1.949,6   22,04
+B: carga + qualidade + perda     4  17,16  484,8  22,02   0,289  1.926,9  1.940,4   21,49
+C: B + módulo                   12   7,89  322,5  17,96   0,527  1.654,4  1.694,9   11,03
+k = parâmetros estimados; MAE, RMSE e CV_RMSE em ms; MSE em ms².
+
+Modelo escolhido: C (B + módulo), pelo menor BIC.
+
+-- Interpretação -------------------------------------------------------------
+- MAE = 7,9 ms: em média, a previsão erra 7,9 ms para mais ou para menos, na
+  mesma unidade da latência.
+- MSE = 322,5 ms² e RMSE = 18,0 ms: o RMSE é 2,28 vezes o MAE. Poucos
+  registros com erro grande pesam no resultado.
+- Os 3 registros de teste com resíduo acima de 30 ms são picos de
+  retransmissão, imprevisíveis por natureza. Sem eles, o RMSE cai para 5,4 ms
+  e o R² sobe para 0,95: os picos concentram o erro quadrático.
+- R² = 0,53: o modelo explica 53% da variação da latência no teste. R² alto
+  não significa acerto em cada registro, e R² médio aqui vem dos picos, não de
+  uma relação errada.
+- Contra a estimativa de engenharia (MAE = 16,3 ms, R² = 0,19), o modelo reduz
+  o erro médio em 52%. A média do treino, que ignora tudo, tem R² = -0,02.
+- Escolha pelo menor BIC (1.695); a validação cruzada concorda (RMSE médio de
+  11,0 ms nos 5 folds). A Ridge com Grid Search escolheu alpha = 0,10 e ficou
+  no mesmo nível (MAE = 7,9 ms): regularizar não muda o quadro.
+
+Gráficos salvos em graficos_ou_imagens/:
+  - modelo_comparacao_metricas.png
+  - modelo_previsto_vs_real.png
+  - modelo_residuos.png
+
+==============================================================================
+ 6 - Priorizar alertas (max-heap)
+==============================================================================
+Considerar alertas dos últimos quantos sóis [10]: 10
+
+Critério de prioridade (score):
+  3 x prioridade do módulo (5 = vida humana) + erro relativo / 10 (teto de 50%)
+  + 2 se houver queda de tensão + 1 se qualidade < 70% + 1 se perda > 4%
+  + 0,2 por sol de espera (quanto mais antigo, mais urgente)
+
+24 alertas inseridos um a um, cada um com heapify-up.
+
+-- Como cada alerta é representado -------------------------------------------
+Tupla (score, ordem de chegada, dicionário). A ordem desempata scores iguais.
+Exemplo, a raiz do heap: (21.11, 4, {
+    'id_registro': 217,
+    'ciclo': 22,
+    'modulo': 'Centro Médico',
+    'codigo_sensor': '0x5101',
+    'mensagem': 'Queda de tensão no transmissor',
+    'erro_rel_pct': 25.1,
+    'tensao_v': 24.9,
+})
+Score = módulo 15 + erro 2,51 + tensão 2 + sinal 0 + espera 1,6 = 21,11
+
+-- Como o heap guarda os alertas: uma lista que representa uma árvore --------
+  nível 0: 21,11
+  nível 1: 20,60  19,93
+  nível 2: 19,77  14,88  19,28  13,41
+  nível 3: 18,91  19,05  12,23  13,25  16,95  12,34  9,93  11,81
+  ... mais 9 alertas nos níveis de baixo
+  pai de i = (i-1)//2; filhos de i = 2i+1 e 2i+2
+  todo pai tem score maior ou igual ao dos filhos: True
+
+-- Os 5 alertas mais urgentes (cada extração faz heapify-down) ---------------
+1. score 21,11 | sol 22 | Centro Médico (0x5101) | Queda de tensão no transmissor
+2. score 20,60 | sol 27 | Centro Médico (0x5101) | Latência acima do previsto
+3. score 19,93 | sol 22 | Controle Ambiental (0x7101) | Latência acima do previsto
+4. score 19,77 | sol 21 | Controle Ambiental (0x7101) | Latência acima do previsto
+5. score 19,28 | sol 25 | Controle Ambiental (0x7101) | Latência acima do previsto
+
+Conferência com o heapq do Python (mesmo top 5): True
+
+-- Automação simulada: JSON que iria para um webhook do n8n ------------------
+{
+  "evento": "alerta_critico_scic",
+  "prioridade": 21.11,
+  "modulo": "Centro Médico",
+  "codigo_sensor": "0x5101",
+  "sol": 22,
+  "mensagem": "Queda de tensão no transmissor",
+  "acao_sugerida": "validar com a equipe humana antes de qualquer ação automática"
+}
+
+-- Por que heap e não lista simples? (tempo medido) --------------------------
+Medindo... pronto.
+ alertas lista (ms) heap (ms) heap mais rápido (x)
+    1000       14,0       3,0                  4,7
+    2000       23,8       2,5                  9,6
+    4000       98,2       5,4                 18,3
+    8000      378,6      10,7                 35,3
+Lista: achar o maior exige olhar todos os alertas, O(n) a cada consulta. Heap:
+inserir custa O(log n) e o mais urgente está sempre na posição 0, O(1).
+
+Gráficos salvos em graficos_ou_imagens/:
+  - heap_benchmark.png
+
+==============================================================================
+ 7 - Buscar por prefixo (trie)
+==============================================================================
+Trie de módulos: 30 termos em 213 nós
+Trie de códigos de sensor: 10 termos em 41 nós
+Trie de palavras de alerta: 19 termos em 115 nós
+Trie de comandos do menu: 22 termos em 147 nós
+O texto é normalizado: maiúsculas e acentos não importam ('comunicacao' acha
+'Comunicação'). Buscar um prefixo de m letras custa O(m), seja qual for o
+tamanho da base.
+
+Prefixo: co
+  módulos: Comando Central; Comunicação Orbital; Controle Ambiental
+  comandos do menu: consultar -> opção 2
+
+Prefixo: com
+  módulos: Comando Central; Comunicação Orbital
+
+Prefixo: 0x1
+  códigos de sensor: 0x1101 = Comunicação Orbital; 0x1201 = Comando Central
+
+Prefixo: lat
+  palavras de alerta: latência (32 registros)
+
+Repare: 'co' traz Comando, Comunicação e Controle; 'com' não traz Controle
+Ambiental, que começa com 'con'. A trie devolve só o que tem o prefixo exato.
+
+Busca exata, como na aula: '0x5101' -> Centro Médico
+
+-- Por que trie e não busca linear? (tempo medido) ---------------------------
+Medindo... pronto.
+códigos linear (ms) trie (ms) trie mais rápida (x)
+  5.000       0,171    0,0067                   26
+ 10.000       0,345    0,0069                   50
+ 20.000       0,731    0,0070                  105
+ 40.000       1,401    0,0083                  169
+Busca linear: compara o prefixo com todos os códigos, O(n x m). Trie: desce m
+níveis e percorre só a subárvore do prefixo, O(m + k), com k = resultados.
+
+Gráficos salvos em graficos_ou_imagens/:
+  - trie_benchmark.png
+
+==============================================================================
+ 8 - Dispositivos, bases numéricas e eletricidade
+==============================================================================
+
+-- Código do sensor: hexadecimal -> binário -> decimal -----------------------
+Formato de 16 bits: 4 bits de tipo | 4 bits de módulo | 8 bits de sensor
+Código do sensor [0x1201]: 0x1201
+0x1201 em binário (cada dígito hex vira 4 bits): 0001 0010 0000 0001
+em decimal (soma de potências de 2): 2^12 + 2^9 + 2^0 = 4096 + 512 + 1 = 4609
+de volta a hexadecimal (divisões sucessivas por 16): 0x1201
+campos separados com operações de bits:
+  tipo   = (4609 >> 12) & 0xF = 1 (comunicação)
+  módulo = (4609 >> 8) & 0xF  = 2
+  sensor = 4609 & 0xFF        = 1
+conferido com int(), bin() e hex() do Python: True
+módulo na base: Comando Central
+
+-- Eletricidade: P = V x I e consumo por sol (1 sol = 24,66 h) ---------------
+                       tensão V corrente A potência W kWh em 30 sóis  quedas
+módulo                                                                      
+Antena Espaço Profundo    27,97       6,51      182,1          134,7       0
+Comunicação Orbital       27,77       2,62       72,8           53,9       1
+Data Center               27,91       2,18       60,8           43,5       1
+Comando Central           28,00       1,80       50,4           37,3       0
+Controle Ambiental        27,95       1,70       47,6           35,2       0
+Centro Médico             27,82       1,60       44,6           33,0       1
+Laboratório Geológico     28,03       1,49       41,9           31,0       0
+Estufa Hidropônica        28,02       1,39       38,8           28,7       0
+Habitação Beta            27,99       1,21       33,9           25,0       0
+Habitação Alfa            27,92       1,20       33,5           24,8       0
+
+Quedas de tensão (abaixo de 25,2 V, 90% dos 28 V nominais):
+  sol 9: Data Center com 25,00 V -> potência de 51,5 W
+  sol 17: Comunicação Orbital com 24,60 V -> potência de 64,5 W
+  sol 22: Centro Médico com 24,90 V -> potência de 43,1 W
+
+-- Lei de Ohm (V = R x I) no painel do centro de controle --------------------
+LED de alerta (fonte de 5,0 V, LED de 2,0 V, corrente de 20 mA):
+  R = (5,0 - 2,0) / 0,02 = 150 ohms;  P = V x I = 3,0 x 0,02 = 0,06 W
+Associação em paralelo: 1/R = 1/300 + 1/300  ->  R = 150 ohms (mesmo resistor do LED)
+Sensor de corrente (shunt de 0,1 ohm em série com o transmissor):
+  V = R x I = 0,1 x 1,6 = 0,16 V; o sensor mede essa queda e calcula I = V / R
+
+-- Dispositivos de entrada, saída e interfaces do SCIC -----------------------
+Entrada   Sensor de tensão e corrente (resistor shunt)
+          mede V e I do transceptor de cada módulo | barramento I2C até o gateway
+Entrada   Medidor de sinal (RSSI) e de perda de pacotes
+          qualidade do enlace e retransmissões | rede interna / Wi-Fi
+Entrada   Relógio da rede (carimbo de tempo)
+          latência de ida e volta das mensagens | rede cabeada
+Entrada   Teclado do operador
+          cadastro de registros e escolha das opções do menu | USB
+Saída     Monitor / terminal do centro de controle
+          menu, tabelas e análise final | HDMI
+Saída     Gráficos e relatório em PDF
+          apoio à decisão e registro histórico | arquivo / impressora
+Saída     LED e alarme sonoro no painel
+          aviso físico do alerta mais urgente (topo do heap) | GPIO do gateway
+Interface Wi-Fi e Bluetooth (sensores IoT)
+          levar as leituras dos módulos até o gateway | sem fio
+Interface Rede cabeada (Ethernet)
+          espinha dorsal entre módulos e o centro de controle | cabo
+Interface Rádio de espaço profundo
+          enlace com orbitadores e com a Terra | antena de alto ganho
+
+Gráficos salvos em graficos_ou_imagens/:
+  - hardware_consumo_por_modulo.png
+
+==============================================================================
+ 9 - Gerenciamento inteligente da comunicação
+==============================================================================
+
+-- Monitoramento contínuo: anomalias de latência -----------------------------
+Regra: latência acima da média dos 5 sóis anteriores do próprio módulo + 2
+desvios-padrão (sem olhar o futuro).
+24 anomalias nos enlaces internos. Por módulo: Laboratório Geológico 4,
+Comunicação Orbital 3, Data Center 3, Estufa Hidropônica 3, Habitação Alfa 3,
+Habitação Beta 3, Centro Médico 2, Controle Ambiental 2, Comando Central 1.
+
+-- Evento sistêmico x falha local --------------------------------------------
+Sol 12: 8 módulos em alerta, qualidade média 74,3% e perda média 4,31%
+Sol 13: 7 módulos em alerta, qualidade média 75,8% e perda média 4,17%
+Causa comum (tempestade de poeira): a automação recomenda o enlace reserva e
+adia transmissões não críticas, em vez de abrir uma ordem de serviço por
+módulo.
+
+-- Manutenção preditiva: tendência da qualidade do sinal ---------------------
+                       p.p. por sol tendência hoje % cruza 70% no sol             recomendação
+módulo                                                                                        
+Estufa Hidropônica            -1,00             63,2             23,2  manutenção corretiva já
+Laboratório Geológico         -0,13             85,9                -                  estável
+Habitação Alfa                -0,10             85,9                -                  estável
+Antena Espaço Profundo        -0,02             86,5                -                  estável
+('-' = não cruza 70% nos próximos 100 sóis; p.p. = pontos percentuais)
+Antecipação: com os dados só até o sol 10, a reta da Estufa Hidropônica já
+previa o cruzamento de 70% no sol 25: 15 sóis para agendar a manutenção antes
+da falha.
+
+-- Redundância de enlaces ----------------------------------------------------
+Enlace principal fora do ar (alerta ou manutenção) em 18,3% dos sóis.
+1 enlace:  disponibilidade 1 - p  = 81,7% (136 h fora em 30 sóis)
+2 enlaces: disponibilidade 1 - p² = 96,6% (25 h fora), com falhas independentes
+
+-- Eficiência: energia gasta com retransmissões ------------------------------
+Consumo dos transceptores em 30 sóis: 447,1 kWh
+Retransmissões por perda de pacotes: 5,19 kWh (1,16% da energia)
+Levando a perda a no máximo 0,5%, a colônia economizaria 3,25 kWh a cada 30
+sóis. Maior gasto: Antena Espaço Profundo (1,46 kWh).
+
+Gráficos salvos em graficos_ou_imagens/:
+  - gestao_tendencia_sinal.png
+  - gestao_alertas_por_sol.png
+  - gestao_anomalias.png
+
+==============================================================================
+ 10 - Análise final dos resultados
+==============================================================================
+Dados
+- 299 registros válidos de 10 módulos em 30 sóis (301 lidos; 1 duplicado e 1
+  sem latência removidos; 3 vazios completados).
+- 19,4% dos registros em alerta; disponibilidade média de 77,2%. Menor: Estufa
+  Hidropônica (63,3%).
+- Latência interna média de 72,0 ms; enlace Terra-Marte de 12,54 a 13,36 min.
+
+Erros numéricos
+- A estimativa de engenharia erra 18,4% em média nos enlaces internos e
+  subestima a latência em 9,2 ms.
+- Erro médio na faixa crítica: Data Center (acima de 25%); Centro Médico,
+  Controle Ambiental, Comando Central (acima de 15%, limite de quem mantém
+  vidas).
+- Terra-Marte: erro absoluto de 473 ms, mas relativo de só 0,06%.
+- Euler com h = 0,1 erra 0,023% contra a solução exata; Newton acha o
+  cruzamento de 70% em 5 iterações.
+
+Modelo de previsão
+- C (B + módulo): MAE 7,9 ms, RMSE 18,0 ms e R² 0,53 no teste.
+- Erro médio 52% menor que o da estimativa de engenharia (MAE 16,3 ms). Sem os
+  3 picos de retransmissão, R² = 0,95.
+
+Alertas e busca
+- 24 alertas abertos nos últimos 10 sóis. Mais urgente: Centro Médico, sol 22,
+  queda de tensão no transmissor (score 21,11).
+- Heap 35 vezes mais rápido que a lista com 8.000 alertas; trie 169 vezes mais
+  rápida que a busca linear com 40.000 códigos.
+
+Gestão inteligente
+- Estufa Hidropônica: o sinal perde 1,00 p.p. por sol e a tendência cruzou 70%
+  no sol 23 (Newton: sol 23,1). Com dados só até o sol 10, já era possível
+  prever o sol 25.
+- Evento sistêmico nos sóis 12 e 13 (tempestade de poeira): resposta coletiva,
+  não chamados isolados.
+- Enlace reserva: disponibilidade de 81,7% para 96,6% (136 h para 25 h fora em
+  30 sóis).
+- Retransmissões gastam 5,19 kWh a cada 30 sóis; 3,25 kWh podem ser
+  economizados.
+
+Recomendações
+1. Fazer já a manutenção corretiva no enlace da Estufa Hidropônica: a
+   tendência da qualidade do sinal está abaixo de 70%.
+2. Atender primeiro o alerta do Centro Médico no sol 22 (queda de tensão no
+   transmissor), o topo do heap.
+3. Trocar a estimativa fixa de engenharia pelo modelo, que considera a carga
+   real (erro médio 52% menor).
+4. Instalar o enlace reserva e reduzir a perda de pacotes, que gasta energia
+   com retransmissões.
+5. Manter a validação humana antes de qualquer ação automática.
+
+Resumo salvo em graficos_ou_imagens/resumo_analise_final.txt
+
+Demonstração concluída em 8,8 s. Rode sem --demo para usar o menu interativo.

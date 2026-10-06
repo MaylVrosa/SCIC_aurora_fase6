@@ -1,0 +1,33 @@
+ANÁLISE FINAL - SCIC Aurora Siger
+
+Dados
+- 299 registros válidos de 10 módulos em 30 sóis (301 lidos; 1 duplicado e 1 sem latência removidos; 3 vazios completados).
+- 19,4% dos registros em alerta; disponibilidade média de 77,2%. Menor: Estufa Hidropônica (63,3%).
+- Latência interna média de 72,0 ms; enlace Terra-Marte de 12,54 a 13,36 min.
+
+Erros numéricos
+- A estimativa de engenharia erra 18,4% em média nos enlaces internos e subestima a latência em 9,2 ms.
+- Erro médio na faixa crítica: Data Center (acima de 25%); Centro Médico, Controle Ambiental, Comando Central (acima de 15%, limite de quem mantém vidas).
+- Terra-Marte: erro absoluto de 473 ms, mas relativo de só 0,06%.
+- Euler com h = 0,1 erra 0,023% contra a solução exata; Newton acha o cruzamento de 70% em 5 iterações.
+
+Modelo de previsão
+- C (B + módulo): MAE 7,9 ms, RMSE 18,0 ms e R² 0,53 no teste.
+- Erro médio 52% menor que o da estimativa de engenharia (MAE 16,3 ms). Sem os 3 picos de retransmissão, R² = 0,95.
+
+Alertas e busca
+- 24 alertas abertos nos últimos 10 sóis. Mais urgente: Centro Médico, sol 22, queda de tensão no transmissor (score 21,11).
+- Heap 35 vezes mais rápido que a lista com 8.000 alertas; trie 169 vezes mais rápida que a busca linear com 40.000 códigos.
+
+Gestão inteligente
+- Estufa Hidropônica: o sinal perde 1,00 p.p. por sol e a tendência cruzou 70% no sol 23 (Newton: sol 23,1). Com dados só até o sol 10, já era possível prever o sol 25.
+- Evento sistêmico nos sóis 12 e 13 (tempestade de poeira): resposta coletiva, não chamados isolados.
+- Enlace reserva: disponibilidade de 81,7% para 96,6% (136 h para 25 h fora em 30 sóis).
+- Retransmissões gastam 5,19 kWh a cada 30 sóis; 3,25 kWh podem ser economizados.
+
+Recomendações
+1. Fazer já a manutenção corretiva no enlace da Estufa Hidropônica: a tendência da qualidade do sinal está abaixo de 70%.
+2. Atender primeiro o alerta do Centro Médico no sol 22 (queda de tensão no transmissor), o topo do heap.
+3. Trocar a estimativa fixa de engenharia pelo modelo, que considera a carga real (erro médio 52% menor).
+4. Instalar o enlace reserva e reduzir a perda de pacotes, que gasta energia com retransmissões.
+5. Manter a validação humana antes de qualquer ação automática.
